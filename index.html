@@ -20,7 +20,6 @@
 		<ul>
 			<li><a href="#intro">Intro</a></li>
 			<li><a href="#methodology">Methodology</a></li>
-			<li><a href="#test">Test</a></li>
 			<li><a href="#activation_functions">Activation Functions</a></li>
 			<li><a href="#about">About</a></li>
 			<li><a href="#contact">Contact</a></li>
@@ -54,8 +53,8 @@
 			<p><strong>Philosophy:</strong> Our philosophy is to start with the simplest and easiest things we can do first, and iterate from there.</p>
 			<p><strong>FLOPs:</strong> We report our results in terms of FLOPs spent on training—rather than batch number—because it gives a more fair comparison between different model architectures. We obtain our FLOPs numbers by using the <a href="https://pytorch.org/tutorials/recipes/recipes/profiler_recipe.html">PyTorch Profiler</a> tool, which produces FLOPs estimates that so far have landed spot on compared to every "by hand" calculation we've done.</p>
 			<p><strong>Training:</strong> All of our training is done on the MNIST training set, as loaded from the <a href="https://huggingface.co/docs/datasets/index">Hugging Face: Datasets</a> python module. This dataset has 60k images, each ot 28x28 px, and each corresponding to a single digit, 0-9. During training, each model is first initialized and trained for one epoch. This epoch is timed. The model is then re-initialized and trained for a number of epochs corresponding to ~4 hours on a desktop computer that we have running in the background with an NVIDIA 3070 RTX graphics card. Accuracy on the validation set is recorded after each epoch of training.</p>
-			<p><strong>Validation & Test:</strong> MNIST includes a 'test' dataset of 10k labeled images. We further split this up into an 8k "validation" set (which is used to generate the "Accuracy" axes in all our figures, except where otherwise noted, and a 2k "test" set (which we reserve for special use.</p>
-			<p><strong>Random Seed:</strong> To ensure repeatability, we use the <a href="https://en.wikipedia.org/wiki/Taxicab_number">taxcab number</a> as our random seed, except where otherwise noted.</p>
+			<p><strong>Validation & Test:</strong> MNIST includes a 'test' dataset of 10k labeled images. We further split this up into an 8k "validation" set (which is used to generate the "Accuracy" axes in all our figures, except where otherwise noted, and a 2k "test" set (which we reserve for special use).</p>
+			<p><strong>Random Seed:</strong> To ensure repeatability, we use the <a href="https://en.wikipedia.org/wiki/Taxicab_number">taxicab number</a> as our random seed, except where otherwise noted.</p>
 
 		</article>
 
