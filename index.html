@@ -7,6 +7,7 @@
 	<link rel="stylesheet" href="utils.css">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 
+
 </head>
 
 <body>
@@ -20,8 +21,9 @@
 			<li><a href="#intro">Intro</a></li>
 			<li><a href="#methodology">Methodology</a></li>
 			<li><a href="#test">Test</a></li>
-			<li><a href="#activations">Activation Functions</a></li>
+			<li><a href="#activation_functions">Activation Functions</a></li>
 			<li><a href="#about">About</a></li>
+			<li><a href="#contact">Contact</a></li>
 		</ul>
 	</nav>
 <!-- END: NAVBAR -->
@@ -58,16 +60,66 @@
 		</article>
 
 <!-- SECTION: ACTIVATION FUNCTIONS -->
+		<article id="activation_functions">
+			<h3>Activation Functions</h3>
+
+			<h4>Training Results From SimpleNet2</h4>
+			<div class="overlapping_images">
+			<img src="images/SimpleNet2_activationFxns_1729seed_dark.png"
+				 class="darkmode"
+				 id="SN2_1729_dark">
+			<img src="images/SimpleNet2_activationFxns_1729seed_light.png"
+				 class="lightmode"
+				 id="SN2_1729_light">
+			<img src="images/SimpleNet2_activationFxns_271828seed_dark.png"
+				 class="darkmode"
+				 style="display:none"
+				 id="SN2_271828_dark">
+			<img src="images/SimpleNet2_activationFxns_271828seed_light.png"
+				 class="lightmode"
+				 style="display:none"
+				 id="SN2_271828_light">
+			<img src="images/SimpleNet2_activationFxns_314159seed_dark.png"
+				 class="darkmode"
+				 style="display:none"
+				 id="SN2_314159_dark">
+			<img src="images/SimpleNet2_activationFxns_314159seed_light.png"
+				 class="lightmode"
+				 style="display:none"
+				 id="SN2_314159_light">
+			<figcaption>Random seed: <a id="SN2_1729" class="clickyHover" style="text-decoration:underline">1729</a> / <a id="SN2_271828" class="clickyHover">271828</a> / <a id="SN2_314159" class="clickyHover">314159</a></figcaption>
+			</div>
+
+			<h4>Training Results from LeNet5</h4>
+			<div class="overlapping_images">
+			<img src="images/LeNet5_activationFxns_1729seed_dark.png"
+				 class="darkmode"
+				 id="LN5_1729_dark">
+			<img src="images/LeNet5_activationFxns_1729seed_light.png"
+				 class="lightmode"
+				 id="LN5_1729_light">
+			<img src="images/LeNet5_activationFxns_271828seed_dark.png"
+				 class="darkmode"
+				 style="display:none"
+				 id="LN5_271828_dark">
+			<img src="images/LeNet5_activationFxns_271828seed_light.png"
+				 class="lightmode"
+				 style="display:none"
+				 id="LN5_271828_light">
+			<img src="images/LeNet5_activationFxns_314159seed_dark.png"
+				 class="darkmode"
+				 style="display:none"
+				 id="LN5_314159_dark">
+			<img src="images/LeNet5_activationFxns_314159seed_light.png"
+				 class="lightmode"
+				 style="display:none"
+				 id="LN5_314159_light">
+			<figcaption>Random seed: <a id="LN5_1729" class="clickyHover" style="text-decoration:underline">1729</a> / <a id="LN5_271828" class="clickyHover">271828</a> / <a id="LN5_314159" class="clickyHover">314159</a></figcaption>
+			</div>
+
+		</article>
 
 <!-- END: ACTIVATION FUNCTIONS -->
-
-<!-- SECTION: TEST -->
-		<article id="test">
-			<h3>Graph test</h3>
-			<img src="light.png" class="lightmode">
-			<img src="dark.png" class="darkmode">
-		</article>
-<!-- END: TEST -->
 
 <!-- SECTION: ABOUT -->
 		<article id="about">
@@ -78,7 +130,19 @@
 		</article>
 <!-- END: ABOUT -->
 
+<!-- SECTION: CONTACT -->
+		<article id="contact">
+			<h3>Contact</h3>
+			<p>Feel free to reach us by email at <a href="mailto:battleground@mnist.org">battleground@mnist.org</a>.</p>
+		</article>
+<!-- END: CONTACT -->
+
 	</main>
+
+<!-- SECTION: SCRIPTS -->
+	<script src="scripts/clickyHover.js"></script>
+<!-- END: SCRIPTS -->
+
 </body>
 
 </html>
