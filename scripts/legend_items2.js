@@ -1,6 +1,7 @@
 
 document.addEventListener('DOMContentLoaded', () => {
   function setupLegendListeners(svgObject) {
+    // Handle cases where the SVG hasn't fully loaded yet
     if (!svgObject.contentDocument) {
       svgObject.addEventListener('load', () => {
         setupLegendListeners(svgObject);
@@ -8,6 +9,7 @@ document.addEventListener('DOMContentLoaded', () => {
       return;
     }
 
+    // Prevent adding multiple event listeners to the same legend items
     const existingRects = svgObject.contentDocument.querySelectorAll('.legend_item rect');
     if (existingRects.length > 0) {
       return; 
@@ -62,12 +64,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  const svgObjects = document.querySelectorAll('object[type="image/svg+xml"]');
-  svgObjects.forEach(setupLegendListeners);
-
-  const initiallyVisibleSvgs = document.querySelectorAll('object[type="image/svg+xml"]:not([style*="display: none"])');
-  initiallyVisibleSvgs.forEach(setupLegendListeners);
-
+  // Observe for changes in the 'style' attribute of SVG objects
   const observer = new MutationObserver(mutations => {
     mutations.forEach(mutation => {
       if (mutation.type === 'attributes' && mutation.attributeName === 'style') {
@@ -78,5 +75,7 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     });
   });
+
   observer.observe(document.body, { attributes: true, subtree: true });
+
 });

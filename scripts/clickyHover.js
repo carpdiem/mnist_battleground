@@ -6,50 +6,50 @@ document.addEventListener("DOMContentLoaded", function() {
     clickyLinks.forEach(link => {
         link.addEventListener('mouseenter', function() {
             const parentDiv = this.closest('div');
-            const imgs = parentDiv.querySelectorAll('img');
+            const objects = parentDiv.querySelectorAll('object');
             const colorScheme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
-            const targetImg = parentDiv.querySelector(`#${this.id}_${colorScheme}`);
+            const targetobject = parentDiv.querySelector(`#${this.id}_${colorScheme}`);
 
             // Store the currently displayed image and its display state
-            imgs.forEach(img => {
-                if (getComputedStyle(img).display !== 'none') {
-                    originalDisplay.set(this, {img: img, display: img.style.display});
+            objects.forEach(object => {
+                if (getComputedStyle(object).display !== 'none') {
+                    originalDisplay.set(this, {object: object, display: object.style.display});
                 }
-                img.style.display = 'none';  // Hide all images
+                object.style.display = 'none';  // Hide all images
             });
 
             // Show the correct image based on color scheme
-            if (targetImg) {
-                targetImg.style.display = 'block';
+            if (targetobject) {
+                targetobject.style.display = 'block';
             }
         });
 
         link.addEventListener('mouseleave', function() {
             if (!originalDisplay.has(this)) return;  // Do nothing if no image was displayed originally
             const parentDiv = this.closest('div');
-            const imgs = parentDiv.querySelectorAll('img');
+            const objects = parentDiv.querySelectorAll('object');
 
             // Hide all images first
-            imgs.forEach(img => img.style.display = 'none');
+            objects.forEach(object => object.style.display = 'none');
 
             // Restore the original image display state
-            const { img, display } = originalDisplay.get(this);
-            img.style.display = display;
+            const { object, display } = originalDisplay.get(this);
+            object.style.display = display;
             originalDisplay.delete(this);  // Clear the stored state after restoring
         });
 
         link.addEventListener('click', function() {
             const parentDiv = this.closest('div');
-            const imgs = parentDiv.querySelectorAll('img');
+            const objects = parentDiv.querySelectorAll('object');
             const links = parentDiv.querySelectorAll('.clickyHover');
             const colorScheme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
-            const targetImg = parentDiv.querySelector(`#${this.id}_${colorScheme}`);
+            const targetobject = parentDiv.querySelector(`#${this.id}_${colorScheme}`);
 
             // Hide all images and show the correct one
-            imgs.forEach(img => img.style.display = 'none');
-            if (targetImg) {
-                targetImg.style.display = 'block';
-                originalDisplay.set(this, {img: targetImg, display: 'block'});  // Update the map to new state
+            objects.forEach(object => object.style.display = 'none');
+            if (targetobject) {
+                targetobject.style.display = 'block';
+                originalDisplay.set(this, {object: targetobject, display: 'block'});  // Update the map to new state
             }
 
             // Handle the underlined style of the links
