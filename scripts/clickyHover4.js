@@ -65,12 +65,14 @@ document.addEventListener("DOMContentLoaded", function() {
         });
     });
 
-    // New functionality to handle startsActive objects
-    const colorScheme = window.matchMedia('(prefers-color-scheme: dark)').matches ? '_dark' : '_light';
-    const startsActiveObjects = document.querySelectorAll(`object.startsActive[id$='${colorScheme}']`);
-    startsActiveObjects.forEach(obj => {
-        obj.style.display = 'none'; // Briefly hide the object
-        obj.style.display = 'block'; // Then show it again
+    // Manually trigger click events on .clickyHover links within figcaption elements
+    const figcaptions = document.querySelectorAll('figcaption');
+    figcaptions.forEach(figcaption => {
+        const clickyLinks = figcaption.querySelectorAll('.clickyHover');
+        if (clickyLinks.length > 0) {
+            // Click the last link, then the first
+            clickyLinks[clickyLinks.length - 1].click();
+            clickyLinks[0].click();
+        }
     });
 });
-
