@@ -30,7 +30,7 @@
 	<main>
 
 <!-- SECTION: INTRODUCTION -->
-		<h3 id="intro">Introduction</h3>
+		<h3 id="intro" class="navTarget">Introduction</h3>
 		<blockquote>
 			<p>Deep Learning is full of choices:</p>
 			<dl>
@@ -48,7 +48,7 @@
 <!-- END: INTRODUCTION -->
 
 <!-- SECTION: METHODOLOGY -->
-		<article id="methodology">
+		<article id="methodology" class="navTarget">
 			<h3>Methodology</h3>
 			<p><strong>Philosophy:</strong> Our philosophy is to start with the simplest and easiest things we can do first, and iterate from there.</p>
 			<p><strong>FLOPs:</strong> We report our results in terms of FLOPs spent on training—rather than batch number—because it gives a more fair comparison between different model architectures. We obtain our FLOPs numbers by using the <a href="https://pytorch.org/tutorials/recipes/recipes/profiler_recipe.html">PyTorch Profiler</a> tool, which produces FLOPs estimates that so far have landed spot on compared to every "by hand" calculation we've done.</p>
@@ -59,7 +59,7 @@
 		</article>
 
 <!-- SECTION: ACTIVATION FUNCTIONS -->
-		<article id="activation_functions">
+		<article id="activation_functions" class="navTarget">
 			<h3>Activation Functions</h3>
 
 			<h4>Training Results From SimpleNet2</h4>
@@ -125,7 +125,7 @@
 <!-- END: ACTIVATION FUNCTIONS -->
 
 <!-- SECTION: ABOUT -->
-		<article id="about">
+		<article id="about" class="navTarget">
 			<h3>About</h3>
 			<p>MNIST battleground is a repository of actual tests of deep learning techniques applied to, and compared on, accessible datasets. In particular, since different choices (of, e.g., activation function, NN architecture, hyperparameters, etc) lead to different computational costs, we will be comparing options by recording validation-set-accuracy vs FLOPs used during training.</p>
 			<h3>Credit and Thanks</h3>
@@ -134,7 +134,7 @@
 <!-- END: ABOUT -->
 
 <!-- SECTION: CONTACT -->
-		<article id="contact">
+		<article id="contact" class="navTarget">
 			<h3>Contact</h3>
 			<p>Feel free to reach us by email at <a href="mailto:battleground@mnist.org">battleground@mnist.org</a>.</p>
 		</article>
@@ -145,6 +145,7 @@
 <!-- SECTION: SCRIPTS -->
 	<script src="scripts/clickyHover2.js"></script>
 	<script src="scripts/legend_items2.js"></script>
+	<script src="scripts/set_scroll_margins.js"></script>
 <!-- END: SCRIPTS -->
 
 </body>
