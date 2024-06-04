@@ -71,8 +71,10 @@ document.addEventListener("DOMContentLoaded", function() {
         const clickyLinks = figcaption.querySelectorAll('.clickyHover');
         if (clickyLinks.length > 0) {
             // Click the last link, then the first
+            console.log('after first click');
             clickyLinks[clickyLinks.length - 1].click();
             setTimeout(function() {
+                console.log('after timeout, and immediately before second click');
                 clickyLinks[0].click();
             }, 500);
         }
