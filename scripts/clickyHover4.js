@@ -72,7 +72,9 @@ document.addEventListener("DOMContentLoaded", function() {
         if (clickyLinks.length > 0) {
             // Click the last link, then the first
             clickyLinks[clickyLinks.length - 1].click();
-            clickyLinks[0].click();
+            setTimeout(function() {
+                clickyLinks[0].click();
+            }, 500);
         }
     });
 });
