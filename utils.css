@@ -1,3 +1,18 @@
+:root {
+	--border-width: 0.5px;
+	--margin-block-size: 0.8rem;
+
+	--bg0: #fbf1c7;
+	--bg4: #a89984;
+}
+
+@media (prefers-color-scheme: dark) {
+	:root {
+		--bg0: #282828;
+		--bg4: #7c6f64;
+	}
+}
+
 .navbar {
 	position: sticky;
 	top: 0;
@@ -15,5 +30,20 @@
 
 .legend_items {
 	cursor: pointer;
+}
+
+.footerbar {
+	position: sticky;
+	grid-column: 1 / -1;
+	bottom: 0;
+	width: 100%;
+	z-index: 1000;
+	font-size: 0.7rem;
+	border-top: var(--border-width) solid var(--bg4);
+	background-color: var(--bg0);
+}
+
+.footerbar p {
+	margin: var(--margin-block-size) var(--margin-block-size);
 }
 
