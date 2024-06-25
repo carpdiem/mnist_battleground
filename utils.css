@@ -41,9 +41,25 @@
 	font-size: 0.8rem;
 	border-top: var(--border-width) solid var(--bg4);
 	background-color: var(--bg0);
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.footerbar .footer-content {
+	flex-grow: 1;
 }
 
 .footerbar p {
 	margin: var(--margin-block-size) var(--margin-block-size);
+}
+
+.footerbar .close-button {
+	background: none;
+	border: none;
+	cursor: pointer;
+	color: inherit;
+	font-size: 1.2rem;
+	padding: 5px 10px;
 }
 
