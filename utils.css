@@ -38,7 +38,7 @@
 	bottom: 0;
 	width: 100%;
 	z-index: 1000;
-	font-size: 0.7rem;
+	font-size: 0.8rem;
 	border-top: var(--border-width) solid var(--bg4);
 	background-color: var(--bg0);
 }
