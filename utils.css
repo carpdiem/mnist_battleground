@@ -5,6 +5,10 @@
 	z-index: 1000;
 }
 
+.navbar a:hover {
+	text-decoration: none;
+}
+
 .clickyHover {
 	cursor: pointer;
 }
