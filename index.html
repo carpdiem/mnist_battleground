@@ -250,7 +250,11 @@
 	<p><strong>Philosophy:</strong> Our philosophy is to start with the simplest and easiest things we can do first, and iterate from there.</p>
 	<p><strong>FLOPs:</strong> We report our results in terms of FLOPs spent on training--rather than batch number--because it gives a more fair comparison between different model architectures. We obtain our FLOPs numbers by using the <a href="https://pytorch.org/tutorials/recipes/recipes/profiler_recipe.html">PyTorch Profiler</a> tool, which produces FLOPs estimates that so far have landed spot on compared to every "by hand" calculation we've done.</p>
 	<p><strong>Training:</strong> All of our training is done on the MNIST training set, as loaded from the <a href="https://huggingface.co/docs/datasets/index">Hugging Face: Datasets</a> python module. This dataset has 60k images, each ot 28x28 px, and each corresponding to a single digit, 0-9. During training, each model is first initialized and trained for one epoch. This epoch is timed. The model is then re-initialized and trained for a number of epochs corresponding to ~4 hours on a desktop computer that we have running in the background with an NVIDIA 3070 RTX graphics card. Accuracy on the validation set is recorded after each epoch of training.</p>
-	<p><strong>Validation & Test:</strong> MNIST includes a 'test' dataset of 10k labeled images. We further split this up into an 8k "validation" set (which is used to generate the "Accuracy" axes in all our figures, except where otherwise noted, and a 2k "test" set (which we reserve for special use).</p>
+	<p><strong>Validation & Test:</strong> MNIST includes a 'test' dataset of 10k labeled images. We further split this up into an 8k "validation" set (which is used to generate the "Accuracy" axes in all our figures, except where otherwise noted), and a 2k "test" set (which we reserve for special use).</p>
+	<p><strong>Batch Size:</strong> All models are trained at a default batch size of 100 items, unless otherwise noted.</p>
+	<p><strong>Optimizer:</strong>All models are trained using the <a href="https://pytorch.org/docs/stable/generated/torch.optim.SGD.html">torch.optim.SGD</a> optimizer, unless otherwise noted. We use pytorch defaults for all kwargs unless otherwise noted.</p>
+	<p><strong>Learning Rate:</strong>All models are trained using a learning rate of 1e-3, unless otherwise noted.</p>
+	<p><strong>Loss Function:</strong>All models are trained using <a href="https://pytorch.org/docs/stable/generated/torch.nn.CrossEntropyLoss.html">cross entropy loss</a>, unless otherwise noted.</p>
 	<p><strong>Random Seed:</strong> To ensure repeatability, we use the <a href="https://en.wikipedia.org/wiki/Taxicab_number">taxicab number</a> as our random seed, except where otherwise noted.</p>
 
 </article>
@@ -271,7 +275,7 @@
 	<p>In the <a href="#depth_of_architecture">depth of architecture investigation</a>, N is set to different values, as labeled in the graph legends. For example, "m_SimpleNet2_ReLU" refers to the base model, with no middle layers, and using the ReLU activation function. "m_SimpleNet2_3layers_ReLU" refers to the SimpleNet2 model with three middle layers (so a total of 4 fully-connected layers... 1 initial + 3 middle), with all layers using the ReLU activation function.</p>
 	<h4 id="LeNet5Arch">LeNet5</h4>
 	<p><a href="models/m_LeNet5.py">[pytorch implementation]</a></p>
-	<p>LeNet5 is a re-implementation of Yann LeCun's original MNIST neural net.</p>
+	<p>LeNet5 is a re-implementation of the original <a href="https://en.wikipedia.org/wiki/LeNet">LeNet-5 neural net</a>.</p>
 
 </article>
 
@@ -282,6 +286,7 @@
 			<h3>About</h3>
 			<p>MNIST battleground is a repository of actual tests of deep learning techniques applied to, and compared on, accessible datasets. In particular, since different choices (of, e.g., activation function, NN architecture, hyperparameters, etc) lead to different computational costs, we will be comparing options by recording validation-set-accuracy vs FLOPs used during training.</p>
 			<h3>Credit and Thanks</h3>
+			<p>First off, credit and thanks go to everyone who has come before us, both great and small. Deep Learning is a fascinating space, and every contribution, from groundbreaking papers that usher in new eras, to humble blog posts that educate on one point or another, is noticed and valued.</p>
 			<p>This site uses the <a href="https://github.com/be5invis/Iosevka">Iosevka</a> font, <a href="https://necolas.github.io/normalize.css/">Normalize.css</a>, and a remixed variant of <a href="https://simplecss.org/">Simple.css</a> using the <a href="https://github.com/morhetz/gruvbox">gruvbox</a> color scheme.</p>
 		</article>
 <!-- END: ABOUT -->
