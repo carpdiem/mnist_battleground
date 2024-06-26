@@ -7,8 +7,11 @@
    viewBox="0 0 164.338 111.76"
    version="1.1"
    id="svg5"
-   inkscape:version="1.2.2 (b0a8486541, 2022-12-01)"
+   inkscape:version="1.1.2 (b8e25be8, 2022-02-05)"
    sodipodi:docname="SimpleNet2_arch_dark.svg"
+   inkscape:export-filename="/Users/carpdiem/github_projects/mnist_battleground/images/architectures/SimpleNet2_arch_dark.png"
+   inkscape:export-xdpi="300"
+   inkscape:export-ydpi="300"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns:xlink="http://www.w3.org/1999/xlink"
@@ -32,12 +35,12 @@
      inkscape:snap-object-midpoints="true"
      inkscape:snap-page="true"
      inkscape:zoom="2.6098017"
-     inkscape:cx="310.55999"
+     inkscape:cx="239.4818"
      inkscape:cy="211.12715"
-     inkscape:window-width="2089"
-     inkscape:window-height="1868"
+     inkscape:window-width="1512"
+     inkscape:window-height="916"
      inkscape:window-x="70"
-     inkscape:window-y="1934"
+     inkscape:window-y="38"
      inkscape:window-maximized="0"
      inkscape:current-layer="layer1"
      inkscape:snap-midpoints="true"
@@ -527,17 +530,17 @@
        style="font-size:16px;line-height:1.25;font-family:'Iosevka Fixed';-inkscape-font-specification:'Iosevka Fixed';text-align:center;word-spacing:0px;white-space:pre;shape-inside:url(#rect21020);display:inline;fill:#ebdbb2;fill-opacity:1"
        x="43.504002"
        y="0"><tspan
-         x="40.663086"
-         y="348.3457"
-         id="tspan29080">input layer
+         x="39.854492"
+         y="348.54145"
+         id="tspan656">input layer
 </tspan><tspan
-         x="41.90918"
-         y="368.3457"
-         id="tspan29082">784 nodes
+         x="47.854492"
+         y="368.54145"
+         id="tspan658">784 nodes
 </tspan><tspan
-         x="27.807617"
-         y="388.3457"
-         id="tspan29084">(28px x 28px)</tspan></text>
+         x="31.854492"
+         y="388.54145"
+         id="tspan660">(28px x 28px)</tspan></text>
     <path
        id="path15245-8-0"
        style="fill:none;stroke:#ebdbb2;stroke-width:0.381;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
@@ -549,13 +552,13 @@
        style="font-size:16px;line-height:1.25;font-family:'Iosevka Fixed';-inkscape-font-specification:'Iosevka Fixed';text-align:center;word-spacing:0px;white-space:pre;shape-inside:url(#rect21020-6);display:inline;fill:#ebdbb2;fill-opacity:1"
        x="43.504002"
        y="0"><tspan
-         x="39.241211"
-         y="348.3457"
-         id="tspan29086">initial layer
+         x="31.854492"
+         y="348.54145"
+         id="tspan662">initial layer
 </tspan><tspan
-         x="41.90918"
-         y="368.3457"
-         id="tspan29088">100 nodes
+         x="47.854492"
+         y="368.54145"
+         id="tspan664">100 nodes
 </tspan></text>
     <text
        xml:space="preserve"
@@ -564,9 +567,9 @@
        style="font-size:16px;line-height:1.25;font-family:'Iosevka Fixed';-inkscape-font-specification:'Iosevka Fixed';text-align:center;word-spacing:0px;white-space:pre;shape-inside:url(#rect21020-6-1);display:inline;fill:#ebdbb2;fill-opacity:1"
        x="43.504002"
        y="0"><tspan
-         x="41.962891"
-         y="348.3457"
-         id="tspan29090">activation functions applied here</tspan></text>
+         x="41.591797"
+         y="348.54145"
+         id="tspan666">activation functions applied here</tspan></text>
     <text
        xml:space="preserve"
        transform="matrix(0.26458333,0,0,0.26458333,36.239502,16.130421)"
@@ -574,9 +577,9 @@
        style="font-size:13.3333px;line-height:1.25;font-family:'Iosevka Fixed';-inkscape-font-specification:'Iosevka Fixed';text-align:center;word-spacing:0px;white-space:pre;shape-inside:url(#rect21020-6-1-6);display:inline;fill:#ebdbb2;fill-opacity:1"
        x="43.504002"
        y="0"><tspan
-         x="77.215087"
-         y="345.9863"
-         id="tspan29092">all layers are fully connected</tspan></text>
+         x="73.59205"
+         y="346.14942"
+         id="tspan668">all layers are fully connected</tspan></text>
     <path
        id="path15245-8-3"
        style="fill:none;stroke:#ebdbb2;stroke-width:0.381;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
@@ -588,17 +591,17 @@
        style="font-size:16px;line-height:1.25;font-family:'Iosevka Fixed';-inkscape-font-specification:'Iosevka Fixed';text-align:center;word-spacing:0px;white-space:pre;shape-inside:url(#rect21020-6-4);display:inline;fill:#ebdbb2;fill-opacity:1"
        x="43.504002"
        y="0"><tspan
-         x="34.854492"
-         y="348.3457"
-         id="tspan29094">output layer
+         x="35.854492"
+         y="348.54145"
+         id="tspan670">output layer
 </tspan><tspan
-         x="46.999023"
-         y="368.3457"
-         id="tspan29096">10 nodes
+         x="51.854492"
+         y="368.54145"
+         id="tspan672">10 nodes
 </tspan><tspan
-         x="55.889648"
-         y="388.3457"
-         id="tspan29098">(logits)
+         x="51.854492"
+         y="388.54145"
+         id="tspan674">(logits)
 </tspan></text>
     <path
        id="path15245-8"
@@ -611,13 +614,13 @@
        style="font-size:16px;line-height:1.25;font-family:'Iosevka Fixed';-inkscape-font-specification:'Iosevka Fixed';text-align:center;word-spacing:0px;white-space:pre;shape-inside:url(#rect21020-6-8);display:inline;fill:#ebdbb2;fill-opacity:1"
        x="43.504002"
        y="0"><tspan
-         x="31.711914"
-         y="348.3457"
-         id="tspan29100">N middle layers
+         x="34.336914"
+         y="348.54145"
+         id="tspan676">N middle layers
 </tspan><tspan
-         x="34.786133"
-         y="368.3457"
-         id="tspan29102">100 nodes / ea
+         x="38.336914"
+         y="368.54145"
+         id="tspan678">100 nodes / ea
 </tspan></text>
   </g>
 </svg>
